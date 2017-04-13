@@ -1,6 +1,7 @@
 ﻿//using SteemitSQLDBSearch.model;
 using SteemitSQLDBSearch.model2;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -50,7 +51,7 @@ namespace SteemitSQLDBSearch
                 else
                 {
                     // Perform a time consuming operation and report progress.
-                    System.Threading.Thread.Sleep(500);
+                    //System.Threading.Thread.Sleep(500);
                     worker.ReportProgress((i * 10));
                     // query
                     /*
@@ -90,14 +91,35 @@ namespace SteemitSQLDBSearch
             {
                 this.tbProgress.Text = "Done!";
 
-                List<Account> l = e.Result as List<Account>;
+                List<Account> l = e.Result as List<Account>;                
 
                 //dgvResults.DataSource = worker;
                 try
                 {
-                    foreach(var r in l)
-                    {                        
-                        this.tbTextResult.Text +=  r.name + Environment.NewLine;
+                    List<Account> a = new List<Account>();
+                    //var al = l.ToDictionary(x => x);
+                    //List<string> ab = al.Keys.ToArray();
+                    //ArrayList ac = new ArrayList(al.Keys);
+
+                    //List<string> keyList = new List<string>(al.Values.ToString());
+                    //List<String> myKeys = al.Values.ToList();
+
+
+                    foreach (var r in l)
+                    {
+                        /*
+                        foreach(var a1 in ac)
+                        {   
+                            this.tbTextResult.Text += a1 + " ";
+                        }
+                        */
+                        this.tbTextResult.Text += "id: " + r.id + Environment.NewLine;
+                        this.tbTextResult.Text += "Name: " +  r.name + Environment.NewLine;
+                        this.tbTextResult.Text += "Comment Count: " + r.comment_count + Environment.NewLine;
+                        this.tbTextResult.Text += "Lifetime Vote Count: " + r.lifetime_vote_count + Environment.NewLine;
+                        this.tbTextResult.Text += "Voting Power: " + r.voting_power + Environment.NewLine;
+                        this.tbTextResult.Text += "Reputation: " + r.reputation + Environment.NewLine;
+                        this.tbTextResult.Text += "Last Post: " + r.last_post + Environment.NewLine;
                     }
                     
                 }
