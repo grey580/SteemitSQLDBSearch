@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DBSteem" Class="steemitDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=sql.steemsql.com;Initial Catalog=DBSteem;Persist Security Info=True;User ID=steemit" SettingsObjectName="SteemitSQLDBSearch.Properties.Settings" SettingsPropertyName="DBSteemConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Accounts" Member="Accounts">
+    <Type Name="Account">
+      <Column Name="id" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="owner" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="active" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="posting" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="memo_key" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="json_metadata" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="proxy" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="last_owner_update" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="last_account_update" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="created" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="mined" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="owner_challenged" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="active_challenged" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="last_owner_proved" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="last_active_proved" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="recovery_account" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="last_account_recovery" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="reset_account" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="comment_count" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="lifetime_vote_count" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="post_count" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="can_vote" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="voting_power" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="last_vote_time" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="balance" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="savings_balance" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="sbd_balance" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="sbd_seconds" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="sbd_seconds_last_update" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="sbd_last_interest_payment" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="savings_sbd_balance" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="savings_sbd_seconds" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="savings_sbd_seconds_last_update" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="savings_sbd_last_interest_payment" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="savings_withdraw_requests" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="vesting_shares" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="vesting_withdraw_rate" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="next_vesting_withdrawal" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="withdrawn" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="to_withdraw" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="withdraw_routes" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="curation_rewards" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="posting_rewards" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="proxied_vsf_votes" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="witnesses_voted_for" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="average_bandwidth" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="lifetime_bandwidth" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="last_bandwidth_update" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="average_market_bandwidth" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="last_market_bandwidth_update" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="last_post" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="last_root_post" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="post_bandwidth" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="vesting_balance" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="reputation" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="transfer_history" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="market_history" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="post_history" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="vote_history" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="other_history" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="witness_votes" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="blog_category" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="dirty" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

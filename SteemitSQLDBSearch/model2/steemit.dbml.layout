@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 14.125" name="steemit">
+  <DataContextMoniker Name="/steemitDataContext" />
+  <nestedChildShapes>
+    <classShape Id="57a853d3-20ea-48c7-bddd-2a5ad053c0d3" absoluteBounds="1.25, 0.75, 2, 13.116681315104165">
+      <DataClassMoniker Name="/steemitDataContext/Account" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e3799dc5-1b16-4774-a5e9-53115bf9b564" absoluteBounds="1.2650000000000001, 1.21, 1.9700000000000002, 12.556681315104166" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
