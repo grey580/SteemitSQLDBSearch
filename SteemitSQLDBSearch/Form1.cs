@@ -120,6 +120,7 @@ namespace SteemitSQLDBSearch
                         this.tbTextResult.Text += "Voting Power: " + r.voting_power + Environment.NewLine;
                         this.tbTextResult.Text += "Reputation: " + r.reputation + Environment.NewLine;
                         this.tbTextResult.Text += "Last Post: " + r.last_post + Environment.NewLine;
+                        this.tbTextResult.Text += "----------------" + Environment.NewLine + Environment.NewLine;
                     }
                     
                 }
